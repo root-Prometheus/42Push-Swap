@@ -6,7 +6,7 @@
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 04:37:01 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/19 10:36:06 by egunday          ###   ########.fr       */
+/*   Updated: 2023/01/20 04:27:51 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include <stdlib.h>
 
 typedef struct t_data
 {
