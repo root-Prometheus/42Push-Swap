@@ -18,17 +18,13 @@ t_stack	*rra(t_stack *root)
 		{
 			t2p = tmp->data;
 			tmp->data = iter->data;
-			tmp = tmp->next;
 		}
+		tmp = tmp->next;
 		t1p = tmp->data;
 		tmp->data = t2p;
-		tmp = tmp->next;
 		t2p = t1p;
-		if (tmp->next == NULL)
-			tmp->data = t2p;
 	}
   // briefly with t2p I store the previous number with t1p the current number then equate t2p to t1p and run the loop.
-  // I used the last if condition to equalize the last digit before exiting the while.
 	return (root);
 }
 ```
