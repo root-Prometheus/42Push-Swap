@@ -6,7 +6,7 @@
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 05:56:24 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/20 10:49:24 by egunday          ###   ########.fr       */
+/*   Updated: 2023/01/21 10:43:26 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 t_stack	*sa(t_stack *root)
 {
 	t_stack		*iter;
-	static int	t1p;
+	int			t1p;
 
+	t1p = 0;
 	iter = root;
 	t1p = iter->data;
 	iter->data = iter->next->data;
 	iter->next->data = t1p;
-	write(1, "sa\n", sizeof("sa\n"));
 	return (root);
 }
 
@@ -54,7 +54,6 @@ t_stack	*ra(t_stack *root)
 		tmp = tmp->next;
 		tmp->data = t1p;
 	}
-	write(1, "ra\n", sizeof("ra\n"));
 	return (root);
 }
 
@@ -81,7 +80,6 @@ t_stack	*rra(t_stack *root)
 		tmp->data = t2p;
 		t2p = t1p;
 	}
-	write(1, "rra\n", sizeof("rra\n"));
 	return (root);
 }
 

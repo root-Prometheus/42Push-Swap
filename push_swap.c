@@ -6,7 +6,7 @@
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 04:37:42 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/19 11:19:26 by egunday          ###   ########.fr       */
+/*   Updated: 2023/01/21 10:39:50 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,18 @@ int	root_chechker(t_stack *stack)
 int	main(int argc, char **argv)// more than  25 line and check the three_mem_alg
 {
 	static int	i;
-	t_stack		*rootA;
+	t_stack		*root_a;
 
-	rootA = NULL;
+	root_a = NULL;
 	if (argc <= 2)//for read from file (working on....)
 		randombullshitgo();//just norm check
-	else if (argc == 3)
-	{
-		while (++i)
-			rootA = push(rootA, ft_atoi(*argv[i]));
-		root_chechker(rootA);
-		printTerminal(rootA = three_mem_alg(rootA));
-	}
-	else if (argc == 5)
-		randombullshitgo();//just norm check
-	else if (argc == 100)
-		randombullshitgo();//just norm check
+	if (argc == 4)
+	    test_three(argc,argv);
+	if (argc == 5)
+	test_five(argc,argv);
+	if (argc == 100)
+		test_one_hundred(argc,argv);
 	else if (argc == 500)
 		randombullshitgo();//just norm check
-	else
-	{
-		while (*argv[++i] != '\0')
-			rootA = push(rootA, ft_atoi(*argv[i]));
-		root_chechker(rootA);
 		randombullshitgo();//just norm check
-	}
 }

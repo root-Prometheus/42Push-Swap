@@ -6,7 +6,7 @@
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 01:39:09 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/20 10:49:28 by egunday          ###   ########.fr       */
+/*   Updated: 2023/01/21 10:30:41 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ t_stack	*pop(t_stack *node)
 	return (node);
 }
 
-t_stack	*push(t_stack *Stack, int data)
+t_stack	*push(t_stack *stack, int data)
 {
 	t_stack	*temp;
 
-	if (Stack == NULL)
+	if (stack == NULL)
 	{
-		Stack = (t_stack *)malloc(sizeof(t_stack) * 2);
-		Stack->data = data;
-		Stack->next = NULL;
-		return (Stack);
+		stack = (t_stack *)malloc(sizeof(t_stack) * 2);
+		stack->data = data;
+		stack->next = NULL;
+		return (stack);
 	}
 	else
 	{
-		temp = Stack;
+		temp = stack;
 		while (temp->next != NULL)
 		{
 			temp = temp->next;
@@ -51,7 +51,7 @@ t_stack	*push(t_stack *Stack, int data)
 		temp->next = (t_stack *)malloc(sizeof(t_stack));
 		temp->next->data = data;
 		temp->next->next = NULL;
-		return (Stack);
+		return (stack);
 	}
 }
 /*
