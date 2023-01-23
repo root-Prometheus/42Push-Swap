@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_b_stack.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 00:13:58 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/23 00:14:21 by egunday          ###   ########.fr       */
+/*   Created: 2023/01/23 09:58:49 by egunday           #+#    #+#             */
+/*   Updated: 2023/01/23 09:59:24 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>
+#include "push_swap.h"
 
-typedef struct t_data
+t_stack	*sb(t_stack *root)
 {
-	struct t_data	*next;
-	int				data;
-}					t_stack;
+}
 
-#endif
+t_stack	*pb(t_stack *root)
+{
+}
+
+t_stack	*rb(t_stack *root)
+{
+}
+
+t_stack	*rrb(t_stack *root)
+{
+}
+
+t_stack	*rrr(t_stack *root)
+{
+}

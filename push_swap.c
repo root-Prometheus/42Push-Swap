@@ -5,44 +5,65 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: egunday <egunday@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 04:37:42 by egunday           #+#    #+#             */
-/*   Updated: 2023/01/21 10:39:50 by egunday          ###   ########.fr       */
+/*   Created: 2023/01/23 00:15:34 by egunday           #+#    #+#             */
+/*   Updated: 2023/01/23 08:20:41 by egunday          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	root_chechker(t_stack *stack)
+int	find_space(int space)
 {
-	t_stack	*iter;
-
-	iter = stack;
-	while (iter->next != NULL)
-	{
-		if (iter->data == iter->next->data)
-			exit(write(1, "\nError", sizeof("\nError")));
-		if (iter->data == 0)
-			exit(write(1, "\nError", sizeof("\nError")));
-		iter = iter->next;
-	}
-	return (1);
+	if (space / 2 != 0)
+		return (space / 2 + 1);
+	else
+		return (space);
 }
 
-int	main(int argc, char **argv)// more than  25 line and check the three_mem_alg
+void	ft_read_file(char **argfv)
 {
-	static int	i;
-	t_stack		*root_a;
+	char	**list;
+	int		count;
+	int		*arr;
+	int		i;
 
-	root_a = NULL;
-	if (argc <= 2)//for read from file (working on....)
-		randombullshitgo();//just norm check
-	if (argc == 4)
-	    test_three(argc,argv);
-	if (argc == 5)
-	test_five(argc,argv);
-	if (argc == 100)
-		test_one_hundred(argc,argv);
-	else if (argc == 500)
-		randombullshitgo();//just norm check
-		randombullshitgo();//just norm check
+	i = 0;
+	count = ft_strlen(argfv[1]);
+	arr = (int *)malloc(find_space(count) * sizeof(int *));
+	list = (char **)malloc(count * sizeof(char **));
+	list = ft_split(argfv[1], ' ');
+	while (list[i] != NULL)
+	{
+		if (list[i] != " ")
+			arr[i] = ft_atoi(list[i]);
+		i++;
+	}
+    if (i == 3)
+    if (i >= 4 && i <= 5)
+    if (i >= 100 && i < 500)
+    if (i == 500)
+
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+		ft_read_file(argv);
+	}
+    else if (argc >= 3)
+    {
+        if (argc == 3)
+            test_three(argc,argv);
+        if (argc >= 4 && argc <= 5)
+            test_five(argc,argv);   
+        if (argc >= 100 && argc < 500)
+            test_one_hundred(argc,argv);
+        if (argc == 500)
+            test_five_hundred(argc,argv);
+            
+    }
+    else
+        exit(write(1,"\nerror",sizeof("\nerror")));
+        
 }
